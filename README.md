@@ -31,7 +31,7 @@ dependencies {
             android:exported="false" />
 ```
 
-##### 3.提供一个 LocalLogContentProvider 类.
+##### 3.提供一个 LocalLogContentProvider(AUTHORITY 要唯一， AndroidManifest 中的 android:authorities 一致.) 类.
 
 ```
 package localprovider;
@@ -118,7 +118,13 @@ ILogSession mLogSession = Logger.newSession(getActivity(), "key", "name");
 ```
 
 
+***
 
+### 相应的 截图
+
+![image 1](./imgs/img1.png)
+![image 1](./imgs/img2.png)
+![image 1](./imgs/img3.png)
 
 
 

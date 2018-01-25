@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String dateTime = sdf.format(new Date());
 
+
                 int level = Level.INFO;
 //                level = Level.VERBOSE;
 //                level = Level.DEBUG;
@@ -54,7 +55,24 @@ public class MainActivity extends AppCompatActivity {
 //                level = Level.ERROR;
 
                 Log.i(TAG,"Current Date is:" + dateTime);
-                Logger.log(mLogSession, level, "Current Date is:" + dateTime);
+
+                level = Level.VERBOSE;
+                Logger.log(mLogSession, level, "VERBOSE,Current Date is:" + dateTime);
+
+                level = Level.DEBUG;
+                Logger.log(mLogSession, level, "DEBUG,Current Date is:" + dateTime);
+
+                level = Level.INFO;
+                Logger.log(mLogSession, level, "INFO,Current Date is:" + dateTime);
+
+                level = Level.APPLICATION;
+                Logger.log(mLogSession, level, "APPLICATION,Current Date is:" + dateTime);
+
+                level = Level.WARNING;
+                Logger.log(mLogSession, level, "WARNING,Current Date is:" + dateTime);
+
+                level = Level.ERROR;
+                Logger.log(mLogSession, level, "ERROR,Current Date is:" + dateTime);
 
             }
         });
